@@ -90,6 +90,7 @@ public class Curso {
 
     public static double getNOTA_APROBACION() {
         return NOTA_APROBACION;
+        
     }
     
     
