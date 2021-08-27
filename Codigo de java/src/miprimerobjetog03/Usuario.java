@@ -20,6 +20,8 @@ public class Usuario {
     private TEstado estado = TEstado.ACTIVO;              // por defecto es null
     private int edad;
     private static int maximoIntentos = 3;   //variable de clase - global
+    private String correo;
+    private String numeroTelefono;
  
     // sintaxis de un método
     // visibilidad tipoRetorno nombreMetodo( tipo param1, tipo param2){}
@@ -91,8 +93,30 @@ public class Usuario {
     public void setEdad(int dia, int mes, int annio) {
             // en construccion
     }
-    
-    
+
+    public void setCorreo(String correo) {
+        if(correo.matches("^[\\w.\\-]+\\@[\\w.\\-]+\\.[a-zA-z]{2,6}$")){    
+            this.correo = correo;
+        }else{
+            this.correo = "N/A";
+        }
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        if(numeroTelefono.matches("^[0-9]{4}-[0-9]{4}$")){
+            this.numeroTelefono = numeroTelefono;
+        }else{
+            this.numeroTelefono = "N/A";
+        }
+    }
+
+    public String getNumeroTelefono() {
+        return numeroTelefono;
+    }
     
     public static void setMaximoIntentos(int maximoIntentos) {
         Usuario.maximoIntentos = maximoIntentos;
@@ -100,10 +124,19 @@ public class Usuario {
     public static int getMaximoIntentos() {
         return maximoIntentos;
     }  
-    @Override   // sobreescritura: nueva version de la operacion
+    /*@Override   // sobreescritura: nueva version de la operacion
     public String toString() {
         return  "Usuario{" + "nombre=" + nombre + ", login=" + login + 
                 ", password=" + password + ", edad=" + edad + ", estado " + estado +
                 ", Intentos antes del bloqueo " + maximoIntentos +'}';
-    }  
+    }  */ //Comentado para ver que hacemos.
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombre=" + nombre + ", login=" + login +
+                ", password=" + password + ", estado=" + estado +
+                ", edad=" + edad + ", correo=" + correo +
+                ", numeroTelefono=" + numeroTelefono + '}';
+    }
+    
 }

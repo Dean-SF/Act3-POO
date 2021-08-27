@@ -24,6 +24,8 @@ public class PruebaUsuarios {
        misDatos.setLogin("BMora");
        misDatos.setPassword("abcde");
        misDatos.setEdad(18);
+       misDatos.setCorreo("biankam@ic-itcr.ac.cr");
+       misDatos.setNumeroTelefono("6102-8259");
        System.out.println( misDatos.toString()) ;
        
        if (misDatos.getEstado() == TEstado.BLOQUEADO){
