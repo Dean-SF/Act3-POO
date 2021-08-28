@@ -26,22 +26,28 @@ public class PruebaUsuarios {
        misDatos.setEdad(18);
        misDatos.setCorreo("biankam@ic-itcr.ac.cr");
        misDatos.setNumeroTelefono("6102-8259");
+       System.out.println("----Primer usuario----");
        System.out.println( misDatos.toString()) ;
+       System.out.println("Correo: "+ misDatos.getCorreo());
+       System.out.println("Numero de telefono: "+misDatos.getNumeroTelefono()+"\n");
        
        if (misDatos.getEstado() == TEstado.BLOQUEADO){
            System.out.println("El usuario " +misDatos.getNombre() + " está bloqueado");
        }
        
        //creación de una instancia utilizando un constructor sobrecargado
+       System.out.println("----Segundo usuario----");
        Usuario usuario2 = new Usuario("Luis", "LPerez", "1234");
        usuario2.setNombre("Luis Andrés");
        usuario2.setEstado(TEstado.BLOQUEADO);
-       System.out.println(usuario2);
+       usuario2.setCorreo("lAndres@06");
+       usuario2.setNumeroTelefono("24585656");
+       System.out.println(usuario2+"\n");
         
-        
+       System.out.println("----Tercer usuario----");
        Usuario usuario3=new Usuario() ;
        usuario3.setNombre("Karla");
-       System.out.println(usuario3);
+       System.out.println(usuario3+"\n");
        
        // redefinición del valor de un atributo de clase que controla la 
        // máxima cantidad de intentos de acceso a un usuario.
@@ -49,6 +55,9 @@ public class PruebaUsuarios {
        
        
        //Visualización de contenido de las instancias creadas
+       System.out.println("----Todos los usuarios----");
+       misDatos.setCorreo("biankam@ic-itcr");
+       misDatos.setNumeroTelefono("6102-825");
        System.out.println(misDatos + "\n" + usuario2 + "\n" + usuario3);
        
     }
