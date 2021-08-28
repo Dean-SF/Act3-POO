@@ -36,7 +36,7 @@ public class Curso {
     public Curso(int p_creditos, String codigo, String nombre) {
         // constructor sobrecargado con igual cantidad de parámetros, distinto orden
         this.codigo = codigo;
-        nombre = nombre;
+        this.nombre = nombre; // Estaba como nombre = nombre y salia en vs code como un warning
         creditos = p_creditos;
     }
 

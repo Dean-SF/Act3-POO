@@ -18,11 +18,14 @@ public class PruebaCursos {
         System.out.println("Hola Mundo soy nuevo en Java");
         System.out.println("Me llamo Ericka");
         
+        /*
+        variables que no estan en uso y VSCode manda warnings
         int cantidad = 0;
         boolean seguir = false;
         double precio = 0;
-
         String nombre = null;
+        */
+
         Curso miCurso = null;   // declaración de una instancia, variable de tipo Curso
         miCurso = new Curso("Programacion Orientada a Objetos", "IC2101", 3);   //  instanciación del objeto
         
